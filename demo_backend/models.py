@@ -10,4 +10,4 @@ class userData(models.Model):
     gender = models.CharField(max_length=20,choices=GENDER_CHOICES)
     age = models.PositiveIntegerField()
     created = models.DateTimeField(auto_now_add=True)
-    pathname = models.CharField(max_length = 100, primary_key=True)
+    pathname = models.CharField(max_length = 10, primary_key=True)
