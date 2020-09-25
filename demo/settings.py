@@ -59,6 +59,7 @@ CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = (
     'http://13.233.193.134:3000',
+    'http://localhost:3000'
 )
 
 ROOT_URLCONF = 'demo.urls'
