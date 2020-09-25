@@ -21,13 +21,18 @@ class userDataApi(APIView):
     def post(self,request,fomrat = None):
         username = userData.objects.filter(pathname = request.data['pathname'])
         email = userData.objects.filter(email = request.data['email'])
+        if username and email :
+            return Response({
+                'msg1' : 'Username already taken',
+                'msg2' : 'Email already exists'
+            })
         if username :
             return Response({
-                'msg':'Username already taken'
+                'msg1':'Username already taken'
             })
         if email :
             return Response({
-                'msg' : 'Email already exists'
+                'msg2' : 'Email already exists'
             })
         serializer = userSerializer(data = request.data)
         if serializer.is_valid():
