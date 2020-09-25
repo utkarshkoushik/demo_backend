@@ -20,7 +20,7 @@ class userDataApi(APIView):
 
     def post(self,request,fomrat = None):
         username = userData.objects.filter(pathname = request.data['pathname'])
-        email = userData.objects.filter(pathname = request.data['email'])
+        email = userData.objects.filter(email = request.data['email'])
         if username :
             return Response({
                 'msg':'Username already taken'
