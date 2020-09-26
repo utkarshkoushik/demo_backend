@@ -28,7 +28,7 @@ SECRET_KEY = '9i=0y5bjv@ezl7+lboks*)71e54p7+p=ytx%dht58f+3$*&k@5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['13.233.193.134','localhost']
+ALLOWED_HOSTS = ['13.233.193.134','localhost','13.235.80.12']
 
 
 # Application definition
@@ -59,7 +59,8 @@ CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = (
     'http://13.233.193.134:3000',
-    'http://localhost:3000'
+    'http://localhost:3000',
+    'http://13.235.80.12:3000'
 )
 
 ROOT_URLCONF = 'demo.urls'
@@ -91,7 +92,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'demodb',
         'USER': 'demouser', 
-        'PASSWORD': 'demopassword',
+        'PASSWORD': 'Utkarsh@123',
         'HOST': 'localhost',
         'PORT': '3306',
     }
