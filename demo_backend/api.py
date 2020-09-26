@@ -1,12 +1,13 @@
 from rest_framework import generics, permissions,viewsets,status
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from django.http import Http404
 from .models import userData
 from .serializers import userSerializer
 
 class userDataApi(APIView):
-
+    permission_classes = [IsAuthenticatedOrReadOnly]
     def get_object(self,pk):
         try:
             return userData.objects.get(pk=pk)
